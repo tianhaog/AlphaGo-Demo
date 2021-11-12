@@ -1,0 +1,8 @@
+human vs policy：
+"%GOGUI DIRECTORY%\gogui-twogtp.exe" -black "python main.py gtp policy --read-file=tmp\savedmodel" -white "%GOGUI DIRECTORY%\gogui-display" -size 19 -komi 7.5 -verbose -auto
+gnugo vs MuGo policy:
+"%GOGUI DIRECTORY%\gogui-twogtp.exe"gogui.exe" -size 19 -computer-both -program "%GOGUI DIRECTORY%\gogui-twogtp.exe -black ""%GNUGO DIRECTORY%\gnugo.exe --level 1 --mode gtp"" -white ""python main.py gtp policy --read-file=tmp\savedmodel"" -games 1 -size 19 -alternate -sgffile gnugo -verbose"
+MuGo policy vs MuGo mcts:
+"%GOGUI DIRECTORY%\gogui.exe" -size 19 -computer-both -program "%GOGUI DIRECTORY%\gogui-twogtp.exe -black ""python main.py gtp policy --read-file=tmp\savedmodel"" -white ""python main.py gtp mcts --read-file=tmp\savedmodel"" -games 1 -size 19 -alternate -sgffile gnugo -verbose"
+
+#You can always replace "policy" with "mcts" back and forth.
